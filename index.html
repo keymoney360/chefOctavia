@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A culinary portfolio showcasing creative plating, savoury cuisine, pastry, desserts and professional kitchen teamwork.">
+  <meta name="theme-color" content="#171714">
+  <title>Chef Portfolio | Culinary Craft & Presentation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#191916;--muted:#77766f;--cream:#f7f5ef;--paper:#fffefa;--gold:#b68a4a;--line:#e7e2d8}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:"DM Sans",Arial,sans-serif}
+    a{color:inherit;text-decoration:none}.wrap{width:min(1160px,calc(100% - 44px));margin:auto}
+    header{position:absolute;z-index:5;top:0;left:0;right:0;color:#fff}.nav{height:86px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #ffffff35}
+    .brand{font-size:13px;font-weight:700;letter-spacing:.22em;text-transform:uppercase}.brand span{color:#e5c18a}
+    .navlinks{display:flex;gap:30px;font-size:12px;letter-spacing:.08em;text-transform:uppercase}.navlinks a{opacity:.88}.navlinks a:hover{color:#e5c18a}
+    .hero{min-height:690px;height:min(850px,100vh);position:relative;display:flex;align-items:center;color:#fff;background:#222;overflow:hidden}
+    .hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(13,13,11,.86) 0%,rgba(13,13,11,.60) 48%,rgba(13,13,11,.12) 100%),url("images/chef-photo-01.jpg") center 48%/cover no-repeat;transform:scale(1.02)}
+    .hero-content{position:relative;z-index:1;padding-top:60px;max-width:720px}.eyebrow{color:#e5c18a;font-size:11px;letter-spacing:.24em;text-transform:uppercase;font-weight:700}
+    h1,h2,h3{font-family:"Playfair Display",Georgia,serif;font-weight:500}h1{font-size:clamp(48px,7.6vw,88px);line-height:1.02;letter-spacing:-.04em;margin:22px 0}
+    .hero p{max-width:550px;color:#e6e3dc;font-size:16px;line-height:1.8}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 20px;font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;border:1px solid #fff;color:#fff;transition:.2s}
+    .btn.primary{background:var(--gold);border-color:var(--gold);color:#171714}.btn:hover{transform:translateY(-2px)}
+    .hero-note{position:absolute;bottom:30px;right:max(22px,calc((100% - 1160px)/2));font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#ffffffb8}
+    section{padding:100px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:42px}.section-head h2{font-size:clamp(34px,4.4vw,52px);margin:10px 0 0;letter-spacing:-.025em}.section-head p{max-width:440px;color:var(--muted);line-height:1.8;font-size:14px;margin:0}
+    .profile-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}.profile-copy h2{font-size:clamp(38px,4.5vw,56px);line-height:1.1;margin:15px 0 24px}.profile-copy p{font-size:15px;line-height:1.9;color:#64635d}
+    .profile-image{height:490px;overflow:hidden;background:#ddd}.profile-image img{width:100%;height:100%;object-fit:cover}
+    .skills{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:35px}
+    .skill{background:var(--paper);padding:22px 20px}.skill .num{color:var(--gold);font-size:11px;letter-spacing:.15em}.skill h3{font-size:19px;margin:10px 0}.skill p{font-size:12px;line-height:1.6;color:var(--muted);margin:0}
+    .gallery-section{background:#eeece5}.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}.gallery-card{margin:0;background:var(--paper);padding:9px 9px 17px;box-shadow:0 8px 30px #17171408}
+    .photo-button{display:block;position:relative;width:100%;height:300px;border:0;padding:0;background:#ddd;cursor:pointer;overflow:hidden}.photo-button img{width:100%;height:100%;object-fit:cover;transition:transform .45s}.photo-button:hover img{transform:scale(1.05)}
+    .zoom{position:absolute;bottom:12px;right:12px;background:#171714d9;color:#fff;padding:9px 12px;font-size:10px;letter-spacing:.08em;text-transform:uppercase;opacity:0;transition:.2s}.photo-button:hover .zoom{opacity:1}
+    figcaption{font-family:"Playfair Display",Georgia,serif;font-size:17px;padding:15px 8px 0}
+    .statement{background:#1c1c18;color:#fff;text-align:center;padding:90px 0}.statement h2{font-size:clamp(34px,5vw,58px);max-width:800px;margin:18px auto;line-height:1.15}.statement p{color:#c5c2b9;font-size:14px;line-height:1.8;max-width:610px;margin:0 auto}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px}.contact-grid h2{font-size:48px;margin:12px 0}.contact-grid p{color:var(--muted);line-height:1.8}
+    .contact-card{padding:30px;background:var(--paper);border:1px solid var(--line)}.contact-card label{display:block;color:var(--gold);font-size:10px;letter-spacing:.16em;text-transform:uppercase;margin:0 0 8px}.contact-card p{margin:0 0 22px;color:var(--ink)}
+    footer{background:#171714;color:#b9b7af;padding:24px 0;font-size:11px}.footer-inner{display:flex;justify-content:space-between;gap:20px}
+    .lightbox{position:fixed;inset:0;background:#000e;z-index:20;display:none;align-items:center;justify-content:center;padding:25px}.lightbox.open{display:flex}.lightbox img{max-width:min(100%,1000px);max-height:82vh;object-fit:contain}.close{position:absolute;top:20px;right:25px;background:none;border:1px solid #ffffff80;color:#fff;font-size:24px;width:44px;height:44px;cursor:pointer}.light-caption{position:absolute;bottom:20px;color:#fff;font-size:13px}
+    @media(max-width:760px){.wrap{width:min(100% - 30px,1160px)}.nav{height:72px}.navlinks{gap:13px;font-size:10px}.brand{font-size:11px}.hero{min-height:680px;height:88vh}.hero:before{background-position:58% center}.hero p{font-size:14px}.hero-note{display:none}section{padding:70px 0}.section-head{display:block}.section-head p{margin-top:18px}.profile-grid,.contact-grid{grid-template-columns:1fr;gap:32px}.profile-image{height:390px}.skills{grid-template-columns:1fr 1fr}.gallery{grid-template-columns:1fr 1fr;gap:12px}.photo-button{height:230px}.gallery-card{padding:6px 6px 12px}figcaption{font-size:15px;padding:12px 6px 0}.footer-inner{flex-direction:column}}
+    @media(max-width:460px){.navlinks a:nth-child(2){display:none}.gallery{grid-template-columns:1fr}.photo-button{height:330px}.skills{grid-template-columns:1fr}.hero h1{font-size:48px}}
+  </style>
+</head>
+<body>
+<header><div class="wrap nav">
+  <a class="brand" href="#home">Chef <span>Portfolio</span></a>
+  <nav class="navlinks" aria-label="Main navigation"><a href="#about">About</a><a href="#specialties">Specialties</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a></nav>
+</div></header>
+<main>
+  <section class="hero" id="home"><div class="wrap hero-content">
+    <div class="eyebrow">Culinary craft · Creativity · Presentation</div>
+    <h1>Thoughtful food.<br>Beautifully served.</h1>
+    <p>A visual portfolio of culinary creations, from carefully composed savoury plates to pastries, desserts and celebration cakes.</p>
+    <div class="actions"><a class="btn primary" href="#gallery">Explore the work</a><a class="btn" href="#contact">Get in touch</a></div>
+  </div><div class="hero-note">Culinary portfolio · Selected work</div></section>
+
+  <section id="about"><div class="wrap profile-grid">
+    <div class="profile-copy"><div class="eyebrow">A little about the chef</div><h2>Passion on the plate.<br>Care in every detail.</h2>
+      <p>This portfolio showcases a love for food preparation and presentation, with work spanning savoury cuisine, seafood, fresh ingredients, pastry and desserts.</p>
+      <p>From balancing colour and texture to finishing each plate with considered garnishes, the focus is on creating food that feels inviting and memorable. The kitchen team photograph also reflects the collaborative nature of professional cooking.</p>
+      <a class="btn" style="border-color:#b68a4a;color:#191916;margin-top:12px" href="#specialties">View specialties</a>
+    </div>
+    <div class="profile-image"><img src="images/chef-photo-09.jpg" alt="Chef and culinary team" loading="lazy"></div>
+  </div></section>
+
+  <section id="specialties" style="padding-top:0"><div class="wrap">
+    <div class="section-head"><div><div class="eyebrow">What you’ll find here</div><h2>Culinary specialties</h2></div><p>A snapshot of the skills and styles represented in the photographs.</p></div>
+    <div class="skills">
+      <article class="skill"><div class="num">01 / PLATING</div><h3>Food presentation</h3><p>Composition, colour, garnishing and finishing touches.</p></article>
+      <article class="skill"><div class="num">02 / SAVOURY</div><h3>Savoury cuisine</h3><p>Meat, seafood, vegetables and composed plates.</p></article>
+      <article class="skill"><div class="num">03 / PASTRY</div><h3>Pastry & desserts</h3><p>Decorated pastries, plated desserts and sweet finishes.</p></article>
+      <article class="skill"><div class="num">04 / CAKES</div><h3>Cake decoration</h3><p>Celebration cakes with decorative piping and detail.</p></article>
+      <article class="skill"><div class="num">05 / FRESH</div><h3>Fresh ingredients</h3><p>Fruit and vegetable preparation with visual appeal.</p></article>
+      <article class="skill"><div class="num">06 / TEAM</div><h3>Kitchen teamwork</h3><p>Working collaboratively in a professional kitchen.</p></article>
+    </div>
+  </div></section>
+
+  <section class="gallery-section" id="gallery"><div class="wrap">
+    <div class="section-head"><div><div class="eyebrow">Selected work</div><h2>The food gallery</h2></div><p>Browse the dishes, desserts and kitchen moments. Select any photograph to view it larger.</p></div>
+    <div class="gallery">
+      
+
+      <figure class="gallery-card">
+        <button class="photo-button" type="button" data-image="images/chef-photo-02.jpg" data-caption="Glazed meat and contemporary plating" aria-label="View Glazed meat and contemporary plating">
+          <img src="images/chef-photo-02.jpg" alt="Glazed meat and contemporary plating" loading="lazy">
+          <span class="zoom">View photo ↗</span>
+        </button>
+        <figcaption>Plated dessert</figcaption>
+      </figure>
+
+      <figure class="gallery-card">
+        <button class="photo-button" type="button" data-image="images/chef-photo-03.jpg" data-caption="Seafood with purée and seasonal accompaniments" aria-label="View Seafood with purée and seasonal accompaniments">
+          <img src="images/chef-photo-03.jpg" alt="Seafood with purée and seasonal accompaniments" loading="lazy">
+          <span class="zoom">View photo ↗</span>
+        </button>
+        <figcaption>Glazed meat and contemporary plating</figcaption>
+      </figure>
+
+      <figure class="gallery-card">
+        <button class="photo-button" type="button" data-image="images/chef-photo-04.jpg" data-caption="Decorated pastries" aria-label="View Decorated pastries">
+          <img src="images/chef-photo-04.jpg" alt="Decorated pastries" loading="lazy">
+          <span class="zoom">View photo ↗</span>
+        </button>
+        <figcaption>Seafood with purée and seasonal accompaniments</figcaption>
+      </figure>
+
+      <figure class="gallery-card">
+        <button class="photo-button" type="button" data-image="images/chef-photo-05.jpg" data-caption="Celebration cake" aria-label="View Celebration cake">
+          <img src="images/chef-photo-05.jpg" alt="Celebration cake" loading="lazy">
+          <span class="zoom">View photo ↗</span>
+        </button>
+        <figcaption>Decorated pastries</figcaption>
+      </figure>
+
+      <figure class="gallery-card">
+        <button class="photo-button" type="button" data-image="images/chef-photo-06.jpg" data-caption="Fresh fruit presentation" aria-label="View Fresh fruit presentation">
+          <img src="images/chef-photo-06.jpg" alt="Fresh fruit presentation" loading="lazy">
+          <span class="zoom">View photo ↗</span>
+        </button>
+        <figcaption>Celebration cake</figcaption>
+      </figure>
+
+      <figure class="gallery-card">
+        <button class="photo-button" type="button" data-image="images/chef-photo-07.jpg" data-caption="Contemporary comfort food" aria-label="View Contemporary comfort food">
+          <img src="images/chef-photo-07.jpg" alt="Contemporary comfort food" loading="lazy">
+          <span class="zoom">View photo ↗</span>
+        </button>
+        <figcaption>Fresh fruit presentation</figcaption>
+      </figure>
+
+      <figure class="gallery-card">
+        <button class="photo-button" type="button" data-image="images/chef-photo-08.jpg" data-caption="Creative plated dish" aria-label="View Creative plated dish">
+          <img src="images/chef-photo-08.jpg" alt="Creative plated dish" loading="lazy">
+          <span class="zoom">View photo ↗</span>
+        </button>
+        <figcaption>Contemporary comfort food</figcaption>
+      </figure>
+
+      <figure class="gallery-card">
+        <button class="photo-button" type="button" data-image="images/chef-photo-09.jpg" data-caption="Professional kitchen team" aria-label="View Professional kitchen team">
+          <img src="images/chef-photo-09.jpg" alt="Professional kitchen team" loading="lazy">
+          <span class="zoom">View photo ↗</span>
+        </button>
+        <figcaption>Creative plated dish</figcaption>
+      </figure>
+
+      <figure class="gallery-card">
+        <button class="photo-button" type="button" data-image="images/chef-photo-10.jpg" data-caption="Chef’s craft and presentation" aria-label="View Chef’s craft and presentation">
+          <img src="images/chef-photo-10.jpg" alt="Chef’s craft and presentation" loading="lazy">
+          <span class="zoom">View photo ↗</span>
+        </button>
+        <figcaption>Chef’s craft and presentation</figcaption>
+      </figure>
+
+      <figure class="gallery-card">
+        <button class="photo-button" type="button" data-image="images/chef-photo-11.jpg" data-caption="Culinary creation" aria-label="View Culinary creation">
+          <img src="images/chef-photo-11.jpg" alt="Culinary creation" loading="lazy">
+          <span class="zoom">View photo ↗</span>
+        </button>
+        <figcaption>Professional kitchen team</figcaption>
+      </figure>
+
+      <figure class="gallery-card">
+        <button class="photo-button" type="button" data-image="images/chef-photo-12.jpg" data-caption="Culinary creation" aria-label="View Culinary creation">
+          <img src="images/chef-photo-12.jpg" alt="culninary creation" loading="lazy">
+          <span class="zoom">View photo ↗</span>
+        </button>
+        <figcaption>Culinary creation</figcaption>
+      </figure>
+    </div>
+  </div></section>
+
+  <section class="statement"><div class="wrap"><div class="eyebrow">The philosophy</div><h2>Good food brings together flavour, technique and a sense of occasion.</h2><p>Every plate is an opportunity to combine care, creativity and attention to detail.</p></div></section>
+
+  <section id="contact"><div class="wrap contact-grid">
+    <div><div class="eyebrow">Let’s connect</div><h2>Make something<br>memorable.</h2><p>For chef opportunities, culinary collaborations, events or enquiries, use the contact details below.</p></div>
+    <div class="contact-card"><label>Chef name</label><p>Octavia Kimani </p><label>Email</label><p>octaviahkimani@gmail.com</p><label>Phone / WhatsApp</label><p>0743727822</p><label>Location</label><p>Nairobi,Kenya</p></div>
+  </div></section>
+</main>
+<footer><div class="wrap footer-inner"><span>© <span id="year"></span> Chef Portfolio</span><span>Crafted with care · By keymoney360</span></div></footer>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer"><button class="close" id="close" aria-label="Close photo">×</button><img id="lightbox-image" src="" alt=""><div class="light-caption" id="light-caption"></div></div>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+  const lightbox = document.getElementById("lightbox");
+  const lbImage = document.getElementById("lightbox-image");
+  const lbCaption = document.getElementById("light-caption");
+  document.querySelectorAll(".photo-button").forEach(button => {
+    button.addEventListener("click", () => {
+      lbImage.src = button.dataset.image;
+      lbImage.alt = button.dataset.caption;
+      lbCaption.textContent = button.dataset.caption;
+      lightbox.classList.add("open");
+    });
+  });
+  function closeLightbox(){lightbox.classList.remove("open");lbImage.src="";}
+  document.getElementById("close").addEventListener("click", closeLightbox);
+  lightbox.addEventListener("click", e => {if(e.target === lightbox) closeLightbox();});
+  document.addEventListener("keydown", e => {if(e.key === "Escape") closeLightbox();});
+</script>
+</body>
+</html>
